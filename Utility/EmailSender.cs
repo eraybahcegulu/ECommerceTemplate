@@ -2,7 +2,7 @@
 
 using Microsoft.AspNetCore.Identity.UI.Services;
 
-namespace mvc.Utility
+namespace ECommerceTemplate.Utility
 {
     public class EmailSender : IEmailSender
     {

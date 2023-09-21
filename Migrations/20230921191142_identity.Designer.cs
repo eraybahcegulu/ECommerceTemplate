@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ECommerceTemplate.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230921190129_identity")]
+    [Migration("20230921191142_identity")]
     partial class identity
     {
         /// <inheritdoc />

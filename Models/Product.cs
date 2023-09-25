@@ -11,14 +11,14 @@ namespace ECommerceTemplate.Models
         [Key]
         public int Id { get; set; }
 
-        [Required(ErrorMessage = "Product Name boş bırakılamaz.")]
+        [Required(ErrorMessage = "Product Name cannot be left blank.")]
         [DisplayName("Product Name")]
         public string Name { get; set; }
 
         [DisplayName("Product Features")]
         public string? Features { get; set; }
 
-        [Required(ErrorMessage = "Kitap Fiyatı boş bırakılamaz!")]
+        [Required(ErrorMessage = "Product Price cannot be left blank.")]
         [Range(0, 9999999)]
         [DisplayName("Price")]
         public double Price { get; set; }

@@ -13,7 +13,7 @@ namespace ECommerceTemplate.Models
             _applicationDbContext = uygulamaDbContext;
             this.dbSet = _applicationDbContext.Set<T>();
 
-            // _applicationDbContext.Kitaplar.Include(k => k.KitapTuru).Include(k => k.KitapTuru);
+             // _applicationDbContext.Products.Include(k => k.ProductType).Include(k => k.ProductType);
         }
         public void Add(T entitiy)
         {

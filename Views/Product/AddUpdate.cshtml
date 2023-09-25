@@ -1,0 +1,67 @@
+﻿@model Product
+
+<form method="post" enctype="multipart/form-data">
+	<input asp-for="ImgUrl" hidden />
+	<div class="row">
+		<div class="col-10">
+			<div class="border p-3 mt-5">
+				<div class="row pb-3">
+					<h2 class="text-primary">@(Model == null ? "Add Product" : "Update Product")</h2>
+					<hr />
+				</div>
+				<div class="mb-3">
+					<label asp-for="Name" class="p-0"> </label>
+					<input asp-for="Name" class="form-control" minlength="2" required />
+					<span asp-validation-for="Name" class="text-danger"></span>
+				</div>
+				<div class="mb-3">
+					<label asp-for="ProductTypeId" class="p-0"> </label>
+					<select asp-for="ProductTypeId" asp-items="ViewBag.ProductTypeList" class="form-select"></select>
+				</div>
+				<div class="mb-3">
+					<label asp-for="Features" class="p-0"> </label>
+					<input asp-for="Features" class="form-control" />
+					<span asp-validation-for="Features" class="text-danger"></span>
+				</div>
+				<div class="mb-3">
+					<label asp-for="Price" class="p-0"></label>
+					<input asp-for="Price" class="form-control" type="number" required min="0" max="9999999" step="1" title="Only numbers can be entered for the price." />
+				</div>
+				<div class="mb-3">
+					<label asp-for="ImgUrl" class="p-0"> </label>
+					<input type="file" name="file" class="form-control" required accept=".png, .jpg, .jpeg" />
+				</div>
+
+				@if (Model != null)
+				{
+					<button type="submit" class="btn btn-lg btn-primary" style="width:200px">Update</button>
+				}
+				else
+				{
+					<button type="submit" class="btn btn-lg btn-primary" style="width:200px">Add</button>
+				}
+
+				<a asp-controller="Product" asp-action="Index" class="btn btn-lg btn-primary" style="width:250px">
+					Back to Products
+				</a>
+
+
+			</div>
+		</div>
+
+		<div class="col-2 mt-5">
+			@if (Model != null)
+			{
+				<img src="@Model.ImgUrl" width="100%" style="border-radius:7px; border:1px solid #bbb9b9" />
+			}
+
+		</div>
+
+	</div>
+
+
+
+
+
+
+</form>

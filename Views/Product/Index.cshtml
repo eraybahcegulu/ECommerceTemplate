@@ -1,0 +1,92 @@
+﻿@model List<Product>
+
+@if (TempData["success"] != null)
+{
+	<div class="alert alert-success">
+		<strong>@TempData["success"]</strong>
+	</div>
+}
+
+@if (TempData["danger"] != null)
+{
+	<div class="alert alert-danger">
+		<strong>@TempData["danger"]</strong>
+	</div>
+}
+
+<div class="container">
+
+	<div class="row pt-3 pb-4">
+		<div>
+			<h1>Products</h1>
+		</div>
+	</div>
+
+	<table class="table table-bordered table-light">
+		<thead>
+			<tr class="table-secondary" align="center" valign="middle">
+				<th>
+					Image
+				</th>
+
+				<th>
+					Id
+				</th>
+				<th>
+					Product Type
+				</th>
+
+
+				<th>
+					Product Name
+				</th>
+
+				<th>
+					Features
+				</th>
+
+				<th>
+					Price
+				</th>
+
+				<th>
+					Actions
+				</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			@foreach (var product in Model)
+			{
+				<tr align ="center" valign="middle">
+					<td >
+						<img src="@product.ImgUrl" style="border-radius: 7px; border: 1px solid #bbb9b9; max-width: 145px; max-height: 275px;" />
+					</td>
+					<td>@product.Id</td>
+					<td>@product.ProductType.Type</td>
+					<td>@product.Name</td>
+					<td>@product.Features</td>
+					<td>@product.Price</td>
+					<td>
+						<div class="btn-group" role="group" style="display:flex; justify-content:space-between">
+                            <a asp-controller="Product" asp-action="AddUpdate" asp-route-id="@product.Id"  type="button" class="btn btn-success">Update</a>
+							<a asp-controller="Product" asp-action="Remove" asp-route-id="@product.Id" type="button" class="btn btn-primary">Remove</a>
+                        </div>
+                    </td>
+				</tr>
+			}
+		</tbody>
+
+	</table>
+
+	<div class="row pt-3 pb-2">
+		<div>
+			<a asp-controller="Product" asp-action="AddUpdate" class="btn btn-lg btn-primary" type="button">
+				Add New Product
+			</a>
+		</div>
+	</div>
+
+
+
+</div>

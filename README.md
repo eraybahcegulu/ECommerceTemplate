@@ -39,3 +39,6 @@ else
 ![6](https://github.com/eraybahcegulu/ECommerceTemplate-MVC/assets/84785201/20f8196d-4769-4e5a-94e3-040b6c836636)
 
 ![7](https://github.com/eraybahcegulu/ECommerceTemplate-MVC/assets/84785201/a3267496-ec5b-4984-b6d4-403784d85f5d)
+
+![x](https://github.com/eraybahcegulu/ECommerceTemplate-MVC/assets/84785201/24ccf5c7-d168-45c8-94b3-51f342f99c22)
+

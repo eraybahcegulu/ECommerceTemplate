@@ -17,3 +17,4 @@ else
 
 }
 ```
+# DBCC CHECKIDENT ('TableName', RESEED, 0);

@@ -15,6 +15,8 @@ namespace ECommerceTemplate.Controllers
         {
             _productTypeRepository = context;
         }
+
+        [Authorize(Roles = UserRoles.Role_Admin)]
         public IActionResult Index()
         {
             List<ProductType> objProductTypeList = _productTypeRepository.GetAll().ToList();

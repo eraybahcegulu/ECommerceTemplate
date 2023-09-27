@@ -22,6 +22,8 @@ namespace ECommerceTemplate.Controllers
 			return View(allProducts);
 		}
 
+
+
         public IActionResult GraphicsCard()
         {
             List<Product> graphicsCardProducts = _productRepository.GetAll(includeProps: "ProductType").Where(p => p.ProductType != null && p.ProductType.Type == "Graphics Card").ToList();

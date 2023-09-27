@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 using System.Drawing;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using ECommerceTemplate.Utility;
+using Microsoft.AspNetCore.Authorization;
+using System.Data;
 
 namespace ECommerceTemplate.Controllers
 {
@@ -19,6 +21,7 @@ namespace ECommerceTemplate.Controllers
             _webHostEnvironment = webHostEnvironment;
         }
 
+        [Authorize(Roles = UserRoles.Role_Admin)]
         public IActionResult Index()
         {
             List<Product> objProductList = _productRepository.GetAll(includeProps: "ProductType").ToList();

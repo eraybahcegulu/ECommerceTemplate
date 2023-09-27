@@ -1,5 +1,7 @@
 ﻿@model List<ProductType>
-
+@{
+    ViewData["Title"] = "Product Types";
+}
 <div class="container-productType" style="display: flex;flex-direction: column; align-items: center;justify-content: center;">
     @if (TempData["success"] != null)
     {

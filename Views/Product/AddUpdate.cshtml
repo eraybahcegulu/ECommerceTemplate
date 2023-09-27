@@ -1,5 +1,7 @@
 ﻿@model Product
-
+@{
+	ViewData["Title"] = "Products";
+}
 <form method="post" enctype="multipart/form-data">
 	<input asp-for="ImgUrl" hidden />
 	<div class="row">

@@ -1,5 +1,9 @@
 ﻿@model List<Product>
 
+@{
+	ViewData["Title"] = "Products";
+}
+
 @if (TempData["success"] != null)
 {
 	<div class="alert alert-success">

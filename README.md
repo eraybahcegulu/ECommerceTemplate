@@ -1,4 +1,7 @@
 # ECommerceTemplate
+
+* ?Adding products to the cart and deleting the product in the cart for those who log in with the user role
+
 ```
 List<Product> graphicsCardProducts = _productRepository.GetAll(includeProps: "ProductType")
 .Where(p => p.ProductType != null && p.ProductType.Type == "Graphics Card")
@@ -19,7 +22,7 @@ else
 ```
 # DBCC CHECKIDENT ('TableName', RESEED, 0);
 
-* ?Adding products to the cart and deleting the product in the cart for those who log in with the user role
+
 
 ![1](https://github.com/eraybahcegulu/ECommerceTemplate-MVC/assets/84785201/3b37f38d-7494-4188-ac0c-42f4bdaffe66)
 
